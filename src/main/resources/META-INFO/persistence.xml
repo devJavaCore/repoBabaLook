@@ -1,0 +1,45 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="babalook">
+		<!-- Implementação do JPA, no nosso caso Hibernate -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- Aqui são listadas todas as entidades -->
+		<class>br.com.babalook.model.Beneficios</class>
+		<class>br.com.babalook.model.Categoria</class>
+		<class>br.com.babalook.model.Compras</class>
+		<class>br.com.babalook.model.ContasAPagar</class>
+		<class>br.com.babalook.model.ControleDeCaixa</class>
+		<class>br.com.babalook.model.Empresa</class>
+		<class>br.com.babalook.model.Expediente</class>
+		<class>br.com.babalook.model.Fabricante</class>
+		<class>br.com.babalook.model.Fornecedor</class>
+		<class>br.com.babalook.model.Funcionario</class>
+		<class>br.com.babalook.model.Login</class>
+		<class>br.com.babalook.model.Medida</class>
+		<class>br.com.babalook.model.Pessoa</class>
+		<class>br.com.babalook.model.Produto</class>
+		<class>br.com.babalook.model.Salario</class>
+		<class>br.com.babalook.model.Servico</class>
+		<class>br.com.babalook.model.Tamanho</class>
+		<class>br.com.babalook.model.TipoBoleto</class>
+		<class>br.com.babalook.model.Vendas</class>
+		<properties>
+			<!-- Propriedades JDBC -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/babalook" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="mysql" />
+			<!-- Configurações específicas do Hibernate -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,5 @@
+package br.com.babalook.model;
+
+public enum Cor {
+	BRANCO, PRETO, AMARELO, AZUL, AZULMARINHO, BEGE, CINZA, DOURADO, LARANJA, MARROM, PRATA, ROSA, ROXO, VERDE, VERMELHO, VIOLETA;
+}
